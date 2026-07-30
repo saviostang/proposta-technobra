@@ -77,7 +77,7 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 .prod-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:7px}
 .prod-desc{font-size:12px;color:rgba(255,255,255,0.5)}
 
-.pricing-grid{display:grid;grid-template-columns:1fr;gap:24px;max-width:460px;margin:0 auto}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:820px;margin:0 auto}
 .pc{border-radius:20px;padding:38px;position:relative}
 .pc.anual{background:linear-gradient(135deg,rgba(102,96,180,0.18) 0%,rgba(18,19,37,0.6) 100%);border:2px solid #6660B4}
 .ptag{display:inline-block;background:#6660B4;color:#fff;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px}
@@ -91,8 +91,28 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 .pimpl{background:rgba(255,190,245,0.08);border:1px solid rgba(255,190,245,0.35);border-radius:14px;padding:16px 18px;margin-top:18px;text-align:center}
 .pimpl-lbl{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px}
 .pimpl-val{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:800;color:#FFBEF5;line-height:1}
-.validity-box{max-width:460px;margin:28px auto 0;text-align:center;font-size:13px;color:rgba(255,255,255,0.45);border-top:1px solid rgba(255,255,255,0.08);padding-top:20px}
+.validity-box{max-width:820px;margin:28px auto 0;text-align:center;font-size:13px;color:rgba(255,255,255,0.45);border-top:1px solid rgba(255,255,255,0.08);padding-top:20px}
 .validity-box strong{color:#FFBEF5}
+.multa-note{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6}
+.multa-note strong{color:#FFBEF5}
+
+.ref-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.ref-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:26px 22px}
+.ref-name{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:10px}
+.ref-row{font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:4px}
+.ref-row strong{color:rgba(255,255,255,0.85)}
+
+.contract-card{background:linear-gradient(135deg,rgba(102,96,180,0.18) 0%,rgba(18,19,37,0.7) 100%);border:1px solid rgba(102,96,180,0.4);border-radius:24px;padding:44px}
+.contract-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:34px}
+.contract-icon{font-size:26px;line-height:1}
+.contract-title{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#FFBEF5;margin-bottom:10px}
+.contract-desc{font-size:14px;color:rgba(255,255,255,0.65);max-width:760px;line-height:1.65}
+.contract-rows{border-top:1px solid rgba(255,255,255,0.1)}
+.crow{display:flex;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:flex-start}
+.crow:last-child{border-bottom:none}
+.ctag{flex-shrink:0;width:140px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#FFBEF5;background:rgba(102,96,180,0.25);border:1px solid rgba(102,96,180,0.5);border-radius:8px;padding:8px 10px;text-align:center}
+.ctext{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.65}
+.ctext strong{color:#fff}
 
 .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;position:relative}
 .timeline::before{content:'';position:absolute;top:27px;left:0;right:0;height:2px;background:linear-gradient(90deg,#6660B4,#FFBEF5);z-index:0}
@@ -118,6 +138,8 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
   .plan-card{padding:28px 20px}
   .cta-section{padding:56px 20px}
   .roi-inner{padding:0 20px}
+  .crow{flex-direction:column;gap:10px}
+  .ctag{width:auto;display:inline-block}
 }
 </style>
 </head>
@@ -336,10 +358,10 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 <section class="section">
   <div class="sec-badge">Investimento</div>
   <h2 class="sec-title"><em>Investimento</em></h2>
-  <p class="sec-desc">Plano anual com 3 assistentes de IA. Implantação (única vez) cobre configuração dos assistentes, cadastro dos fornecedores atuais de cada praça e treinamento dos 3 compradores.</p>
+  <p class="sec-desc">Duas opções de configuração, de acordo com o volume de negociações da operação. Implantação (única vez) cobre configuração dos assistentes, cadastro dos fornecedores atuais de cada praça e treinamento dos compradores.</p>
   <div class="pricing-grid">
     <div class="pc anual">
-      <div class="ptag">Plano dgenny®</div>
+      <div class="ptag">Opção 1</div>
       <div class="pname">3 Assistentes de IA · Plano Anual</div>
       <div class="pprice">R$ 5.000<span class="permo">&nbsp;/mês</span></div>
       <div class="pperiod">Plano anual, cobrado mensalmente</div>
@@ -356,9 +378,91 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
         <div class="pimpl-lbl">Implantação única</div>
         <div class="pimpl-val">R$ 8.000</div>
       </div>
+      <div class="multa-note">Condições de rescisão flexibilizadas pelo Contrato de Produtividade abaixo.</div>
+    </div>
+    <div class="pc anual">
+      <div class="ptag">Opção 2</div>
+      <div class="pname">1 Assistente de IA · Plano Anual</div>
+      <div class="pprice">R$ 3.000<span class="permo">&nbsp;/mês</span></div>
+      <div class="pperiod">Plano anual, cobrado mensalmente</div>
+      <ul class="pitems">
+        <li>1 Assistente de IA dgenny® dedicado</li>
+        <li>6.000 conversas iniciadas/ano</li>
+        <li>WhatsApp Business oficial (Meta)</li>
+        <li>Prospecção e mapa de cotação automático</li>
+        <li>Integração com Obra Prima (sujeita à liberação de API)</li>
+        <li>Governança e rastreabilidade total</li>
+        <li>Acompanhamento dedicado por 90 dias</li>
+      </ul>
+      <div class="pimpl">
+        <div class="pimpl-lbl">Implantação única</div>
+        <div class="pimpl-val">R$ 6.000</div>
+      </div>
+      <div class="multa-note">Condições de rescisão flexibilizadas pelo Contrato de Produtividade abaixo.</div>
     </div>
   </div>
   <div class="validity-box">Proposta válida até <strong>14/08/2026</strong> (15 dias a partir da emissão).</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CLIENTES DE REFERÊNCIA -->
+<section class="section">
+  <div class="sec-badge">Clientes de Referência</div>
+  <h2 class="sec-title">Quem já usa <em>dgenny®</em></h2>
+  <p class="sec-desc">Construtoras que utilizam a dgenny® no dia a dia e podem compartilhar a experiência com a Technobra.</p>
+  <div class="ref-grid">
+    <div class="ref-card">
+      <div class="ref-name">Beco Castelo e Hogar</div>
+      <div class="ref-row"><strong>Contato:</strong> Gustavo Reis</div>
+      <div class="ref-row"><strong>Telefone:</strong> (48) 9613-4486</div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-name">Naus Construtora</div>
+      <div class="ref-row"><strong>Contato:</strong> João Pedro</div>
+      <div class="ref-row"><strong>Telefone:</strong> (48) 8402-5251</div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-name">Construtora ATR</div>
+      <div class="ref-row"><strong>Contato:</strong> Erica Silva</div>
+      <div class="ref-row"><strong>Telefone:</strong> (41) 8872-2502</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTRATO DE PRODUTIVIDADE -->
+<section class="section">
+  <div class="sec-badge">Condições Contratuais</div>
+  <h2 class="sec-title">Contrato de <em>Produtividade</em></h2>
+  <div class="contract-card">
+    <div class="contract-head">
+      <div class="contract-icon">🤝</div>
+      <div>
+        <div class="contract-title">Contrato de Produtividade</div>
+        <div class="contract-desc">Incluímos essa cláusula porque acreditamos — de verdade — nos resultados que a dgenny® entrega. Se a ferramenta está sendo usada, ela está gerando retorno. E um cliente que cresce com a plataforma não precisa de barreiras para ficar — precisa de resultado para querer continuar. Por isso, quanto mais a Technobra usar a dgenny®, mais flexível é o compromisso contratual.</div>
+      </div>
+    </div>
+    <div class="contract-rows">
+      <div class="crow">
+        <div class="ctag">Compromisso</div>
+        <div class="ctext">A Technobra se compromete a utilizar no mínimo <strong>70% das conversas iniciadas do pacote</strong> contratado durante os <strong>2 primeiros meses</strong> de contrato.</div>
+      </div>
+      <div class="crow">
+        <div class="ctag">Benefício</div>
+        <div class="ctext">Cumprido esse compromisso — uso de no mínimo 70% dos créditos nos 2 primeiros meses — a Technobra pode <strong>cancelar o contrato a partir do 3º mês sem multa nenhuma</strong>.</div>
+      </div>
+      <div class="crow">
+        <div class="ctag">Condição</div>
+        <div class="ctext">Caso o uso <strong>não atinja 70%</strong> das conversas iniciadas em qualquer um dos 2 primeiros meses, a multa rescisória permanece válida até o <strong>12º mês</strong> do contrato.</div>
+      </div>
+      <div class="crow">
+        <div class="ctag">Multa</div>
+        <div class="ctext"><strong>35% sobre o valor do contrato restante</strong> — calculada sobre os meses que faltam para completar os 12 meses de vigência, aplicável apenas se o compromisso de uso não for cumprido nos 2 primeiros meses.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"></div>
